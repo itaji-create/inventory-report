@@ -2,7 +2,8 @@ from collections import Counter
 
 
 class SimpleReport:
-    def generate(params):
+    @classmethod
+    def generate(self, params):
         datas_fabricacao = [item["data_de_fabricacao"] for item in params]
         datas_validade = [item["data_de_validade"] for item in params]
         empresas = [item["nome_da_empresa"] for item in params]
